@@ -17,5 +17,6 @@ android_app {
     static_libs: [
         "SettingsLibTile",
         "org.lineageos.settings.resources",
+        "SettingsLib",
     ],
 }
