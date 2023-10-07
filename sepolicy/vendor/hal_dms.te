@@ -1,0 +1,4 @@
+# HwBinder calls and callbacks between the audio effects HAL and DMS.
+binder_call(hal_dms_client, hal_dms_server)
+binder_call(hal_dms_server, hal_dms_client)
+hal_attribute_hwservice(hal_dms, hal_dms_hwservice)
