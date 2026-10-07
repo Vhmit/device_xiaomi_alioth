@@ -132,7 +132,9 @@ PRODUCT_VENDOR_PROPERTIES += \
     ro.vendor.dolby.dax.version=DAX3_3.6.1.6_r1 \
     ro.vendor.audio.dolby.dax.version=DAX3_3.6 \
     ro.vendor.audio.dolby.dax.support=true \
-    ro.vendor.audio.dolby.surround.enable=true
+    ro.vendor.audio.dolby.surround.enable=true \
+    ro.vendor.audio.dolby.dap.control=qdsp \
+    ro.vendor.audio.dolby.spatializer.support=false
 
 # Display
 PRODUCT_PACKAGES += \
