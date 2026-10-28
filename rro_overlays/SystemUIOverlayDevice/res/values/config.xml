@@ -80,4 +80,20 @@
 
     <!-- Maximum vertical offset of navigation bar for burn-in protection -->
     <dimen name="navigation_bar_burn_in_offset_max_y">3dp</dimen>
+
+    <!-- If not zero, limits the internal screen recorder's framerate to the set value. -->
+    <integer name="config_screenRecorderMaxFramerate">60</integer>
+
+    <!-- If not empty, sets the AVC codec profile level used for the internal screen recorder.
+         Possible values: 3, 3.1, 3.2, 4, 4.1, 4.2, 5, 5.1, 5.2
+    -->
+    <string name="config_screenRecorderAVCProfileLevel" translatable="false">5.1</string>
+
+    <!-- Whether the internal screen recorder may use the codec's full supported frame rate
+         and request the selected rate from its virtual display. -->
+    <bool name="config_screenRecorderHighRefreshRate">true</bool>
+
+    <!-- Whether to suppress expensive SystemUI cross-window blur while the built-in screen
+         recorder is active. Normal blur behavior is restored when recording stops. -->
+    <bool name="config_screenRecorderDisableBlur">true</bool>
 </resources>
