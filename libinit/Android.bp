@@ -5,20 +5,17 @@
 //
 
 cc_library_static {
-    name: "init_xiaomi_kona",
+    name: "init_xiaomi_alioth",
     srcs: [
-        "init_xiaomi_kona.cpp",
+        "init_xiaomi_alioth.cpp",
         "libinit_dalvik_heap.cpp",
         "libinit_variant.cpp",
         "libinit_utils.cpp",
+        "libvariant_xiaomi_alioth.cpp",
     ],
-    header_libs: ["libvariant_headers"],
-    whole_static_libs: [
-        "libbase",
-    ] + select(soong_config_variable("xiaomi_kona", "variant_lib"), {
-        any @ lib: [lib],
-        default: ["libvariant_default"],
-    }),
+    local_include_dirs: ["include"],
+    export_include_dirs: ["include"],
+    whole_static_libs: ["libbase"],
     include_dirs: ["system/core/init"],
     recovery_available: true,
 }

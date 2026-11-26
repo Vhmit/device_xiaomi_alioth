@@ -19,6 +19,8 @@ persist.vendor.audio.ras.enabled=false
 persist.vendor.audio.ring.filter.mask=0
 persist.vendor.audio.spv3.enable=true
 persist.vendor.audio.voicecall.speaker.stereo=true
+persist.vendor.audio.delta.refresh=true
+persist.vendor.audio.misound.disable=true
 ro.vendor.audio.game.effect=true
 ro.vendor.audio.ring.filter=true
 ro.vendor.audio.scenario.support=true
@@ -34,6 +36,36 @@ ro.vendor.audio.us.proximity=true
 ro.vendor.audio.vocal.support=true
 ro.vendor.audio.voice.change.support=true
 ro.vendor.audio.voice.change.youme.support=true
+ro.audio.monitorRotation=true
+ro.vendor.audio.enhance.support=false
+ro.vendor.audio.gain.support=true
+ro.vendor.audio.karaok.support=true
+ro.vendor.audio.ns.support=false
+ro.vendor.audio.sfx.audiovisual=false
+ro.vendor.audio.soundtrigger.appdefine.cnn.level=35
+ro.vendor.audio.soundtrigger.appdefine.gmm.level=55
+ro.vendor.audio.soundtrigger.appdefine.gmm.user.level=65
+ro.vendor.audio.soundtrigger.appdefine.vop.level=10
+ro.vendor.audio.soundtrigger.lowpower=true
+ro.vendor.audio.soundtrigger.snr=16
+ro.vendor.audio.soundtrigger=sva
+ro.vendor.audio.soundtrigger.training.level=50
+ro.vendor.audio.soundtrigger.xanzn.cnn.level=80
+ro.vendor.audio.soundtrigger.xanzn.gmm.level=45
+ro.vendor.audio.soundtrigger.xanzn.gmm.user.level=30
+ro.vendor.audio.soundtrigger.xanzn.vop.level=10
+ro.vendor.audio.soundtrigger.xatx.cnn.level=45
+ro.vendor.audio.soundtrigger.xatx.gmm.level=25
+ro.vendor.audio.soundtrigger.xatx.gmm.user.level=40
+ro.vendor.audio.soundtrigger.xatx.vop.level=-10
+ro.vendor.audio.spk.clean=true
+ro.vendor.audio.spk.stereo=true
+ro.vendor.audio.us.type=mius
+ro.vendor.audio.zoom.support=true
+ro.vendor.audio.zoom.type=1
+vendor.audio.adm.buffering.ms=2
+vendor.audio.offload.buffer.size.kb=256
+vendor.audio_hal.period_multiplier=2
 vendor.audio.capture.enforce_legacy_copp_sr=true
 vendor.audio.dolby.ds2.enabled=false
 vendor.audio.dolby.ds2.hardbypass=false
@@ -99,6 +131,9 @@ vendor.audio_hal.in_period_size=144
 vendor.audio_hal.period_size=192
 vendor.voice.path.for.pcm.voip=true
 
+# Audio hardware
+ro.hardware.audio.primary=alioth
+
 # Bluetooth
 bluetooth.device.class_of_device=90,2,12
 bluetooth.hardware.power.operating_voltage_mv=3300
@@ -156,6 +191,8 @@ ro.surface_flinger.supports_background_blur=1
 ro.surface_flinger.use_color_management=true
 ro.surface_flinger.wcg_composition_dataspace=143261696
 ro.vendor.display.sensortype=2
+ro.vendor.display.paneltype=2
+vendor.display.defer_fps_frame_count=2
 vendor.display.comp_mask=0
 vendor.display.disable_excl_rect=0
 vendor.display.disable_excl_rect_partial_fb=1
@@ -174,6 +211,8 @@ vendor.display.use_smooth_motion=0
 drm.service.enabled=true
 
 # Fingerprint
+persist.vendor.fingerprint.sensor_location=1080|965|115|local:4630946736638489729
+persist.vendor.fingerprint.type=side
 persist.vendor.qfp=false
 
 # FRP
@@ -225,6 +264,30 @@ ro.vendor.extension_library=libqti-perfd-client.so
 
 # Qualcomm System Daemon
 persist.vendor.qcomsysd.enabled=1
+
+# Radio
+persist.radio.multisim.config=dsds
+persist.rcs.supported=0
+persist.vendor.data.mode=concurrent
+persist.vendor.radio.apm_sim_not_pwdn=1
+persist.vendor.radio.atfwd.start=true
+persist.vendor.radio.cdma_cap=true
+persist.vendor.radio.custom_ecc=1
+persist.vendor.radio.data_con_rprt=1
+persist.vendor.radio.data_ltd_sys_ind=1
+persist.vendor.radio.dynamic_sar=1
+persist.vendor.radio.enable_temp_dds=true
+persist.vendor.radio.enableadvancedscan=true
+persist.vendor.radio.force_ltd_sys_ind=1
+persist.vendor.radio.force_on_dc=true
+persist.vendor.radio.manual_nw_rej_ct=1
+persist.vendor.radio.mbn_cdma=/vendor/firmware_mnt/image/modem_pr/mcfg/configs/mcfg_sw/oem_sw_j11.txt
+persist.vendor.radio.procedure_bytes=SKIP
+persist.vendor.radio.rat_on=combine
+persist.vendor.radio.redir_party_num=1
+persist.vendor.radio.sib16_support=1
+ro.com.android.dataroaming=true
+ro.telephony.default_network=26,26
 
 # Seamless transfer
 sys.fflag.override.settings_seamless_transfer=true
