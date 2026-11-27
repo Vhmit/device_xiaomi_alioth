@@ -15,6 +15,7 @@ android_app {
     privileged: true,
 
     static_libs: [
+        "SettingsLibTile",
         "org.lineageos.settings.resources",
     ],
 }

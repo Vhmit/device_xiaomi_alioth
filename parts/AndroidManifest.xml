@@ -40,6 +40,20 @@
         </receiver>
 
         <service
+            android:name=".doze.PickupDozeService"
+            android:exported="false" />
+
+        <provider
+            android:name=".doze.PickupDozeSettingsProvider"
+            android:authorities="org.lineageos.settings.pickup_doze"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </provider>
+
+        <service
             android:name=".thermal.ThermalService"
             android:exported="true"
             android:permission="ThermalService" />
