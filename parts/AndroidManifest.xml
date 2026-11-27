@@ -60,8 +60,10 @@
 
         <activity
             android:name=".thermal.ThermalActivity"
+            android:enableOnBackInvokedCallback="true"
             android:exported="false"
-            android:label="@string/thermal_title">
+            android:label="@string/thermal_title"
+            android:theme="@style/Theme.Parts.Expressive">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
@@ -78,10 +80,16 @@
             <meta-data
                 android:name="com.android.settings.order"
                 android:value="-255" />
-	    <meta-data
+            <meta-data
                 android:name="com.android.settings.summary"
                 android:resource="@string/thermal_summary" />
         </activity>
+
+        <activity
+            android:name=".thermal.ThermalProfileActivity"
+            android:exported="false"
+            android:label="@string/thermal_title"
+            android:theme="@style/Theme.SubSettingsBase.Expressive" />
 
     </application>
 

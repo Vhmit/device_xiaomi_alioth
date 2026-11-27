@@ -23,6 +23,7 @@ import android.os.UserHandle;
 
 import androidx.preference.PreferenceManager;
 
+import org.lineageos.settings.R;
 import org.lineageos.settings.utils.FileUtils;
 
 public final class ThermalUtils {
@@ -34,6 +35,28 @@ public final class ThermalUtils {
     protected static final int STATE_DIALER = 4;
     protected static final int STATE_GAMING = 5;
     protected static final int STATE_STREAMING = 6;
+
+    private static final int[] PROFILE_NAME_RES = {
+            R.string.thermal_default,
+            R.string.thermal_benchmark,
+            R.string.thermal_browser,
+            R.string.thermal_camera,
+            R.string.thermal_dialer,
+            R.string.thermal_gaming,
+            R.string.thermal_streaming
+    };
+    private static final int[] PROFILE_DESC_RES = {
+            R.string.thermal_default_desc,
+            R.string.thermal_benchmark_desc,
+            R.string.thermal_browser_desc,
+            R.string.thermal_camera_desc,
+            R.string.thermal_dialer_desc,
+            R.string.thermal_gaming_desc,
+            R.string.thermal_streaming_desc
+    };
+
+    protected static final int PROFILE_COUNT = PROFILE_NAME_RES.length;
+
     private static final String THERMAL_CONTROL = "thermal_control";
     private static final String THERMAL_STATE_DEFAULT = "0";
     private static final String THERMAL_STATE_BENCHMARK = "10";
@@ -56,6 +79,14 @@ public final class ThermalUtils {
 
     protected ThermalUtils(Context context) {
         mSharedPrefs = PreferenceManager.getDefaultSharedPreferences(context);
+    }
+
+    protected static int getProfileNameRes(int state) {
+        return PROFILE_NAME_RES[state];
+    }
+
+    protected static int getProfileDescRes(int state) {
+        return PROFILE_DESC_RES[state];
     }
 
     public static void startService(Context context) {

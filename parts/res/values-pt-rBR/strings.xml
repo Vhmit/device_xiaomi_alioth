@@ -22,12 +22,22 @@
 
     <!-- Perfis térmicos -->
     <string name="thermal_title">Perfis térmicos</string>
-    <string name="thermal_summary">Ajuste os perfis térmicos de cada app para ter o melhor desempenho</string>
-    <string name="thermal_default">Padrão</string>
-    <string name="thermal_benchmark">Benchmark</string>
+    <string name="thermal_summary">Ajuste o perfil térmico de cada app</string>
+    <string name="thermal_default">Sem otimização</string>
+    <string name="thermal_benchmark">Desempenho</string>
     <string name="thermal_browser">Navegador</string>
     <string name="thermal_camera">Câmera</string>
     <string name="thermal_dialer">Telefone</string>
     <string name="thermal_gaming">Jogos</string>
     <string name="thermal_streaming">Streaming</string>
+    <string name="thermal_default_desc">Usa o comportamento padrão do sistema, sem ajustes específicos para o app.</string>
+    <string name="thermal_benchmark_desc">Prioriza o desempenho e permite que o aparelho aqueça mais.</string>
+    <string name="thermal_browser_desc">Equilibra o desempenho e o consumo durante a navegação e a leitura.</string>
+    <string name="thermal_camera_desc">Otimizado para tirar fotos e gravar vídeos.</string>
+    <string name="thermal_dialer_desc">Prioriza o baixo consumo e reduz o aquecimento durante chamadas de voz.</string>
+    <string name="thermal_gaming_desc">Mantém o desempenho em jogos, permitindo temperaturas mais altas.</string>
+    <string name="thermal_streaming_desc">Equilibra o desempenho e o consumo durante sessões longas de vídeo ou música.</string>
+    <string name="thermal_search_hint">Pesquisar apps</string>
+    <string name="thermal_search_hint_short">Pesquisar\u2026</string>
+    <string name="thermal_profile_footer">O perfil selecionado é aplicado automaticamente enquanto o app está em uso.</string>
 </resources>
