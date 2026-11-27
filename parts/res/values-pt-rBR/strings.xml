@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+     Copyright (C) 2020-2022 The LineageOS Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<resources>
+    <!-- Tela ambiente -->
+    <string name="pickup_doze_title">Levantar para mostrar a tela ambiente</string>
+    <string name="pickup_doze_summary">Mostrar brevemente a tela ambiente ao pegar o smartphone bloqueado</string>
+    <string name="pickup_doze_update_failed">Não foi possível alterar a configuração do gesto de levantar</string>
+
+    <!-- Perfis térmicos -->
+    <string name="thermal_title">Perfis térmicos</string>
+    <string name="thermal_summary">Ajuste os perfis térmicos de cada app para ter o melhor desempenho</string>
+    <string name="thermal_default">Padrão</string>
+    <string name="thermal_benchmark">Benchmark</string>
+    <string name="thermal_browser">Navegador</string>
+    <string name="thermal_camera">Câmera</string>
+    <string name="thermal_dialer">Telefone</string>
+    <string name="thermal_gaming">Jogos</string>
+    <string name="thermal_streaming">Streaming</string>
+</resources>

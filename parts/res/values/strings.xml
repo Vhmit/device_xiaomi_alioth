@@ -15,6 +15,7 @@
      limitations under the License.
 -->
 <resources>
+    <!-- Ambient Display -->
     <string name="pickup_doze_title">Lift to show ambient display</string>
     <string name="pickup_doze_summary">Briefly show the ambient display when you pick up your locked phone</string>
     <string name="pickup_doze_update_failed">Could not change the lift gesture setting</string>
