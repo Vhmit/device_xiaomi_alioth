@@ -162,7 +162,8 @@
         <activity
             android:name=".speaker.ClearSpeakerActivity"
             android:exported="false"
-            android:label="@string/clear_speaker_title">
+            android:label="@string/clear_speaker_title"
+            android:theme="@style/Theme.Parts.Expressive">
             <intent-filter>
                 <action android:name="com.android.settings.action.IA_SETTINGS" />
             </intent-filter>

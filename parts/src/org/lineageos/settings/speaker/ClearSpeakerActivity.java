@@ -20,15 +20,20 @@ import android.os.Bundle;
 
 import com.android.settingslib.collapsingtoolbar.CollapsingToolbarBaseActivity;
 
-public class ClearSpeakerActivity extends CollapsingToolbarBaseActivity {
+import org.lineageos.settings.R;
 
-    private static final String TAG_CLEARSPEAKER = "clearspeaker";
+public class ClearSpeakerActivity extends CollapsingToolbarBaseActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        getSupportFragmentManager().beginTransaction().replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
-                new ClearSpeakerFragment(), TAG_CLEARSPEAKER).commit();
+        setTitle(R.string.clear_speaker_title);
+        if (savedInstanceState == null) {
+            getSupportFragmentManager().beginTransaction()
+                    .replace(com.android.settingslib.collapsingtoolbar.R.id.content_frame,
+                            new ClearSpeakerFragment())
+                    .commit();
+        }
     }
 }

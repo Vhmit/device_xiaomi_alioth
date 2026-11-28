@@ -40,4 +40,7 @@
     <string name="thermal_search_hint">Pesquisar apps</string>
     <string name="thermal_search_hint_short">Pesquisar\u2026</string>
     <string name="thermal_profile_footer">O perfil selecionado é aplicado automaticamente enquanto o app está em uso.</string>
+    <string name="clear_speaker_title">Limpar alto-falante</string>
+    <string name="clear_speaker_summary">Reproduzir um tom de limpeza por 30 segundos</string>
+    <string name="clear_speaker_description">Reproduza o tom de limpeza com o alto-falante voltado para baixo. Se a poeira persistir, repita algumas vezes enquanto move o celular suavemente.\n\nDesconecte os fones de ouvido antes de começar.</string>
 </resources>
