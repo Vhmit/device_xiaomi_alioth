@@ -21,8 +21,17 @@
     android:versionName="1.0"
     android:sharedUserId="android.uid.system">
 
+    <uses-permission android:name="android.permission.ACCESS_FPS_COUNTER" />
     <uses-permission android:name="android.permission.GET_TASKS" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <queries>
+        <intent>
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
+        </intent>
+    </queries>
 
     <application
         android:icon="@mipmap/ic_launcher"
@@ -90,6 +99,65 @@
             android:exported="false"
             android:label="@string/thermal_title"
             android:theme="@style/Theme.SubSettingsBase.Expressive" />
+
+        <activity
+            android:name=".gamebar.GameBarSettingsActivity"
+            android:exported="true"
+            android:label="@string/game_bar_title"
+            android:permission="android.permission.STATUS_BAR_SERVICE"
+            android:theme="@style/Theme.Parts.Expressive">
+            <intent-filter>
+                <action android:name="com.android.settings.action.IA_SETTINGS" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE_PREFERENCES" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            <meta-data
+                android:name="com.android.settings.category"
+                android:value="com.android.settings.category.ia.system" />
+            <meta-data
+                android:name="com.android.settings.icon"
+                android:resource="@drawable/ic_gamebar" />
+            <meta-data
+                android:name="com.android.settings.icon_tintable"
+                android:value="true" />
+            <meta-data
+                android:name="com.android.settings.summary"
+                android:resource="@string/game_bar_summary" />
+        </activity>
+
+        <activity
+            android:name=".gamebar.GameBarPerAppConfigActivity"
+            android:exported="false"
+            android:theme="@style/Theme.Parts.Expressive" />
+
+        <service
+            android:name=".gamebar.GameBarTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_gamebar"
+            android:label="@string/game_bar_tile_label"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+            <meta-data
+                android:name="android.service.quicksettings.TOGGLEABLE_TILE"
+                android:value="true" />
+        </service>
+
+        <service
+            android:name=".gamebar.GameBarMonitorService"
+            android:exported="false" />
+
+        <receiver
+            android:name=".gamebar.GameBarBootReceiver"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
 
     </application>
 

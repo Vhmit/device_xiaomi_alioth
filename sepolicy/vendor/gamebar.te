@@ -1,0 +1,5 @@
+# Read the GPU counters and the legacy DRM FPS counter.
+allow devicesettings_gamebar vendor_sysfs_kgsl:dir search;
+allow devicesettings_gamebar vendor_sysfs_kgsl:{ file lnk_file } r_file_perms;
+allow devicesettings_gamebar vendor_sysfs_graphics:dir search;
+allow devicesettings_gamebar vendor_sysfs_graphics:file r_file_perms;
